@@ -3,121 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemoLite プライバシーポリシー</title>
+    <title>Logos - AI音声メモ＆AI変換 プライバシーポリシー</title>
     <style>
+        :root {
+            color-scheme: light;
+            --bg: #f4f7f8;
+            --surface: #ffffff;
+            --text: #22313f;
+            --muted: #5f6f7c;
+            --accent: #0f766e;
+            --accent-soft: #dff5f2;
+            --border: #d7e3e7;
+            --shadow: rgba(34, 49, 63, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+            line-height: 1.75;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, #ecfeff 0, transparent 28%),
+                linear-gradient(180deg, #f8fbfc 0%, var(--bg) 100%);
         }
-        .container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+        .wrap {
+            width: min(900px, calc(100% - 32px));
+            margin: 40px auto 64px;
         }
+
+        .hero,
+        .section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: 0 16px 36px var(--shadow);
+        }
+
+        .hero {
+            padding: 32px 28px;
+            margin-bottom: 20px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
         h1 {
-            font-size: 24px;
-            border-bottom: 2px solid #008080; /* アプリのアクセントカラーに合わせました */
-            padding-bottom: 10px;
-            margin-bottom: 30px;
+            margin: 0 0 8px;
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.2;
         }
+
+        .meta {
+            margin: 0 0 18px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .lead {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .section {
+            padding: 24px 28px;
+            margin-bottom: 16px;
+        }
+
         h2 {
-            font-size: 18px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #005555;
+            margin: 0 0 12px;
+            font-size: 20px;
+            line-height: 1.35;
+            color: var(--accent);
         }
+
         p {
-            margin-bottom: 15px;
-            font-size: 15px;
+            margin: 0 0 12px;
         }
-        ul {
-            margin-bottom: 15px;
-            padding-left: 20px;
+
+        p:last-child {
+            margin-bottom: 0;
         }
-        li {
-            margin-bottom: 5px;
-        }
+
         .footer {
-            margin-top: 50px;
-            font-size: 12px;
-            color: #777;
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: 13px;
             text-align: center;
         }
+
         a {
-            color: #008080;
-            text-decoration: none;
+            color: var(--accent);
+        }
+
+        @media (max-width: 640px) {
+            .wrap {
+                width: min(100% - 20px, 900px);
+                margin-top: 20px;
+                margin-bottom: 32px;
+            }
+
+            .hero,
+            .section {
+                padding: 20px 18px;
+                border-radius: 16px;
+            }
         }
     </style>
 </head>
 <body>
+    <main class="wrap">
+        <section class="hero">
+            <div class="eyebrow">Privacy Policy</div>
+            <h1>プライバシーポリシー</h1>
+            <p class="meta">対象アプリ: Logos - AI音声メモ＆AI変換 / 最終更新日: 2026年2月24日</p>
+            <p class="lead">本ポリシーは、Logos - AI音声メモ＆AI変換（以下「本アプリ」）におけるユーザー情報の取扱いを定めるものです。実装されている機能（メモ保存、iCloud同期、AI変換、音声文字起こし、サブスクリプション）に対応した内容を記載しています。</p>
+        </section>
 
-<div class="container">
-    <h1>プライバシーポリシー</h1>
-    
-    <p>本アプリ「MemoLite」（以下、「当アプリ」といいます）における、ユーザー情報の取り扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます）を定めます。</p>
+        <section class="section">
+            <h2>1. 取得・利用する情報</h2>
+            <p>本アプリでは、機能提供のために以下の情報を取り扱います。</p>
+            <p>・メモ本文、フォルダ情報、変換設定（アプリ内の保存・表示・編集のため）</p>
+            <p>・録音した音声データ（文字起こし実行時のみ）</p>
+            <p>・AI変換に送信するテキスト（ユーザーが変換操作を行った場合のみ）</p>
+            <p>・認証情報（Appleサインイン経由の認証結果、Firebase Authentication のUID等）</p>
+            <p>・課金/プラン情報（StoreKit取引情報、レシート情報、チケット残高、プラン状態）</p>
+            <p>・端末/アプリ識別子（アプリ内で生成するインストールID等。Keychain / UserDefaults に保持）</p>
+        </section>
 
-    <h2>1. 収集する情報と利用目的</h2>
-    <p>当アプリでは、サービスの提供のために以下の情報を利用します。</p>
-    
-    <ul>
-        <li><strong>音声データ</strong><br>
-        利用目的：音声認識（文字起こし）機能を提供するため。<br>
-        アプリ内の録音機能によって取得された音声データは、文字起こし処理のために一時的に外部のAPIサービスへ送信されます。</li>
-        
-        <li><strong>テキストデータ（メモ内容）</strong><br>
-        利用目的：アプリ内でのメモの保存・管理、およびAIによる文章整形・変換機能を提供するため。<br>
-        文章整形機能を利用する場合、対象のテキストデータは処理のために一時的に外部のAPIサービスへ送信されます。</li>
-    </ul>
+        <section class="section">
+            <h2>2. ローカル保存とiCloud同期</h2>
+            <p>メモ、フォルダ、変換設定は、端末内のアプリ領域（Application Support）に保存されます。</p>
+            <p>本アプリは、利用可能な場合に iCloud コンテナを用いた同期を行う実装を含みます。iCloud同期の実行可否は、ユーザーのAppleアカウント状態・端末設定・環境に依存します。</p>
+            <p>ローカル保存ファイルには iOS のファイル保護（<code>completeUntilFirstUserAuthentication</code>）を適用する実装を行っています。</p>
+        </section>
 
-    <h2>2. 外部サービスの利用について</h2>
-    <p>当アプリは、高度な機能を提供するために以下の第三者サービスを利用しており、ユーザーのデータ（音声およびテキスト）が各サービスプロバイダーに送信されます。各社はそれぞれのプライバシーポリシーに従ってデータを処理します。</p>
+        <section class="section">
+            <h2>3. 音声文字起こし時の外部送信</h2>
+            <p>文字起こし機能の実行時、録音音声（WAVデータ）は Firebase Cloud Functions 経由で OpenAI API に送信され、文字起こし結果を取得します。</p>
+            <p>当方は、アプリ実装上、文字起こしのために送信された音声データ自体を独自サーバーへ恒久保存することを目的としていません（機能処理のための送信を除く）。</p>
+            <p>OpenAI側での取扱いは、OpenAIの規約・ポリシーに従います。</p>
+        </section>
 
-    <ul>
-        <li><strong>Gladia (音声認識サービス)</strong><br>
-        音声データの文字起こしに使用されます。<br>
-        <a href="https://www.gladia.io/privacy-policy" target="_blank">Gladia プライバシーポリシー</a></li>
-        
-        <li><strong>Google Gemini API (生成AIサービス)</strong><br>
-        文章の整形、要約、プロンプト変換などに使用されます。<br>
-        <a href="https://policies.google.com/privacy" target="_blank">Google プライバシーポリシー</a></li>
-    </ul>
+        <section class="section">
+            <h2>4. AI文章変換時の外部送信</h2>
+            <p>AI変換機能の実行時、ユーザーが変換対象として指定したテキストおよびプロンプト内容は Firebase Cloud Functions 経由で Google Gemini API に送信されます。</p>
+            <p>当方は、アプリ実装上、AI変換のために送信されたテキスト本文を独自サーバーへ恒久保存することを目的としていません（機能処理および課金計算に必要な範囲を除く）。</p>
+            <p>Google側での取扱いは、Googleの規約・ポリシーに従います。</p>
+        </section>
 
-    <h2>3. データの保存と保護</h2>
-    <p>当アプリで作成されたメモデータ、フォルダ情報、変換設定などは、基本的にお客様の端末内（ローカルストレージ）にのみ保存されます。</p>
-    <p>開発者がお客様のメモ内容や音声データを独自のサーバー等に収集・保存することはありません。ただし、前述の外部APIサービスを利用する過程で、処理のためにデータが送信されることについては予めご了承ください。</p>
+        <section class="section">
+            <h2>5. 認証・セキュリティ対策</h2>
+            <p>本アプリは、Appleサインインと Firebase Authentication を利用して認証を行います。</p>
+            <p>Cloud Functions呼び出し時には Firebase App Check を利用し、不正利用の抑止を図っています。</p>
+        </section>
 
-    <h2>4. マイクへのアクセスについて</h2>
-    <p>当アプリでは、音声をテキストに変換する機能を提供するために、デバイスのマイクへのアクセス権限を求めます。この権限は、ユーザーがアプリ内で録音操作を行った場合にのみ使用され、バックグラウンドで無断で録音を行うことはありません。</p>
+        <section class="section">
+            <h2>6. 課金・チケット管理に関する情報</h2>
+            <p>本アプリは App Store サブスクリプション（StoreKit）を利用し、レシート検証やプラン/チケット状態の同期のために Firebase Cloud Functions / Firestore を利用します。</p>
+            <p>サーバー側には、課金状態・チケット残高・検証日時・プラン状態等の管理情報が保存される場合があります。</p>
+            <p>課金処理そのものは Apple により実施され、決済情報（クレジットカード番号等）を当方が直接取得することはありません。</p>
+        </section>
 
-    <h2>5. 情報の第三者への提供</h2>
-    <p>当アプリは、以下の場合を除き、ユーザーの同意なく個人情報を第三者に提供することはありません。</p>
-    <ul>
-        <li>前述の外部サービス（Gladia, Google）を利用して機能を提供する場合</li>
-        <li>法令に基づき開示が必要となる場合</li>
-    </ul>
+        <section class="section">
+            <h2>7. 利用目的</h2>
+            <p>取得・利用する情報は、以下の目的のために利用します。</p>
+            <p>・メモ機能、音声文字起こし、AI変換等の提供</p>
+            <p>・認証状態の維持、利用制限の適用、不正利用対策</p>
+            <p>・サブスクリプション/チケット管理、購入復元、サポート対応</p>
+            <p>・障害対応および品質改善（エラー内容、利用状況の把握）</p>
+        </section>
 
-    <h2>6. 免責事項</h2>
-    <p>当アプリが利用する外部APIサービス（Gladia, Google Gemini）の稼働状況や仕様変更により、一時的に機能が利用できなくなる場合があります。開発者は、当アプリの利用により生じた損害について、一切の責任を負わないものとします。</p>
+        <section class="section">
+            <h2>8. 第三者提供・外部サービス</h2>
+            <p>本アプリは、機能提供のため、以下の外部サービスを利用します。</p>
+            <p>・Apple（Sign in with Apple / App Store / StoreKit）</p>
+            <p>・Google Firebase（Authentication, Cloud Functions, Firestore, App Check）</p>
+            <p>・Google Gemini API（AI文章変換）</p>
+            <p>・OpenAI API（音声文字起こし）</p>
+            <p>法令に基づく場合を除き、上記目的以外でユーザー情報を第三者へ販売または提供しません。</p>
+        </section>
 
-    <h2>7. プライバシーポリシーの変更</h2>
-    <p>本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除いて、ユーザーに通知することなく変更することができるものとします。変更後のプライバシーポリシーは、本ページに掲載したときから効力を生じるものとします。</p>
+        <section class="section">
+            <h2>9. 保存期間と削除</h2>
+            <p>端末内およびiCloud上のメモ等のデータは、ユーザーが削除するまで保持される場合があります。</p>
+            <p>サーバー側の認証・課金管理情報は、サービス運営上必要な期間保持される場合があります。</p>
+            <p>アプリのアンインストール、端末操作、iCloud設定変更等により一部データが削除される場合がありますが、外部サービス側の保持は各社ポリシーに従います。</p>
+        </section>
 
-    <h2>8. お問い合わせ</h2>
-    <p>本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。</p>
-    <p>
-        連絡先：[ryouta.996445@gmail.com]<br>
-        </p>
-</div>
+        <section class="section">
+            <h2>10. ユーザーの選択</h2>
+            <p>ユーザーは、マイク権限、Appleサインイン、App Storeサブスクリプション、iCloud設定等を端末または各サービスの設定画面から管理できます。</p>
+            <p>AI変換や文字起こしを実行しない限り、当該処理のためのテキスト/音声外部送信は行われません。</p>
+        </section>
 
-<div class="footer">
-    <p>&copy; 2026 MemoLite All Rights Reserved.</p>
-</div>
+        <section class="section">
+            <h2>11. ポリシーの変更</h2>
+            <p>本ポリシーは、法令・サービス仕様・実装変更等に応じて改定する場合があります。改定後は本アプリ内に掲載した時点または別途定めた効力発生日から適用されます。</p>
+        </section>
 
+        <section class="section">
+            <h2>12. お問い合わせ</h2>
+            <p>本ポリシーに関するお問い合わせは、以下までご連絡ください。</p>
+            <p><a href="mailto:ryouta.996445@gmail.com">ryouta.996445@gmail.com</a></p>
+        </section>
+
+        <p class="footer">© 2026 Logos - AI音声メモ＆AI変換</p>
+    </main>
 </body>
 </html>

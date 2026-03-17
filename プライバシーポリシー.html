@@ -129,7 +129,7 @@
         <section class="hero">
             <div class="eyebrow">Privacy Policy</div>
             <h1>プライバシーポリシー</h1>
-            <p class="meta">対象アプリ: Logos - AI音声メモ＆AI変換 / 最終更新日: 2026年2月24日</p>
+            <p class="meta">対象アプリ: Logos - AI音声メモ＆AI変換 / 最終更新日: 2026年3月18日</p>
             <p class="lead">本ポリシーは、Logos - AI音声メモ＆AI変換（以下「本アプリ」）におけるユーザー情報の取扱いを定めるものです。実装されている機能（メモ保存、iCloud同期、AI変換、音声文字起こし、サブスクリプション）に対応した内容を記載しています。</p>
         </section>
 
@@ -152,17 +152,21 @@
         </section>
 
         <section class="section">
-            <h2>3. 音声文字起こし時の外部送信</h2>
-            <p>文字起こし機能の実行時、録音音声（WAVデータ）は Firebase Cloud Functions 経由で OpenAI API に送信され、文字起こし結果を取得します。</p>
-            <p>当方は、アプリ実装上、文字起こしのために送信された音声データ自体を独自サーバーへ恒久保存することを目的としていません（機能処理のための送信を除く）。</p>
-            <p>OpenAI側での取扱いは、OpenAIの規約・ポリシーに従います。</p>
+            <h2>3. サードパーティAI（OpenAI）への音声データ送信</h2>
+            <p>アプリ内でユーザーが明示的に文字起こし機能を実行した場合にのみ、以下のデータが外部のサードパーティAIサービスに送信されます。</p>
+            <p>・<strong>送信先のサービス:</strong> OpenAI API (Whisper)</p>
+            <p>・<strong>送信されるデータ:</strong> 録音された音声データ（WAV形式等）</p>
+            <p>・<strong>利用目的:</strong> 高精度な音声文字起こし機能を提供するため</p>
+            <p>・<strong>データの保護と取扱い:</strong> 音声データは Firebase Cloud Functions を経由して安全に送信されます。API経由で送信されたデータは本機能の提供目的にのみ使用され、OpenAIのAIモデルの学習（トレーニング）には使用されません。OpenAIは本アプリと同等以上のデータ保護水準を提供しています。</p>
         </section>
 
         <section class="section">
-            <h2>4. AI文章変換時の外部送信</h2>
-            <p>AI変換機能の実行時、ユーザーが変換対象として指定したテキストおよびプロンプト内容は Firebase Cloud Functions 経由で Google Gemini API に送信されます。</p>
-            <p>当方は、アプリ実装上、AI変換のために送信されたテキスト本文を独自サーバーへ恒久保存することを目的としていません（機能処理および課金計算に必要な範囲を除く）。</p>
-            <p>Google側での取扱いは、Googleの規約・ポリシーに従います。</p>
+            <h2>4. サードパーティAI（Google Gemini）へのテキストデータ送信</h2>
+            <p>アプリ内でユーザーが明示的にAI変換機能を実行した場合にのみ、以下のデータが外部のサードパーティAIサービスに送信されます。</p>
+            <p>・<strong>送信先のサービス:</strong> Google Gemini API</p>
+            <p>・<strong>送信されるデータ:</strong> 変換対象として指定されたテキストデータ、およびユーザーの指示（プロンプト）</p>
+            <p>・<strong>利用目的:</strong> 文章の要約、構造化、翻訳などのAIテキスト変換機能を提供するため</p>
+            <p>・<strong>データの保護と取扱い:</strong> テキストデータは Firebase Cloud Functions を経由して安全に送信されます。API経由で送信されたデータは本機能の提供目的にのみ使用され、Googleは本アプリと同等以上のデータ保護水準を提供しています。</p>
         </section>
 
         <section class="section">
@@ -189,12 +193,12 @@
 
         <section class="section">
             <h2>8. 第三者提供・外部サービス</h2>
-            <p>本アプリは、機能提供のため、以下の外部サービスを利用します。</p>
+            <p>本アプリは、機能提供のため、以下の外部サービスを利用します。これらのサードパーティ事業者は、本プライバシーポリシーと同等またはそれ以上の個人データ保護水準を満たしていることを確認しています。</p>
             <p>・Apple（Sign in with Apple / App Store / StoreKit）</p>
             <p>・Google Firebase（Authentication, Cloud Functions, Firestore, App Check）</p>
             <p>・Google Gemini API（AI文章変換）</p>
             <p>・OpenAI API（音声文字起こし）</p>
-            <p>法令に基づく場合を除き、上記目的以外でユーザー情報を第三者へ販売または提供しません。</p>
+            <p>法令に基づく場合を除き、上記目的以外でユーザー情報を本人の同意なく第三者へ販売または提供することはありません。</p>
         </section>
 
         <section class="section">
@@ -205,9 +209,9 @@
         </section>
 
         <section class="section">
-            <h2>10. ユーザーの選択</h2>
+            <h2>10. ユーザーの選択と同意</h2>
             <p>ユーザーは、マイク権限、Appleサインイン、App Storeサブスクリプション、iCloud設定等を端末または各サービスの設定画面から管理できます。</p>
-            <p>AI変換や文字起こしを実行しない限り、当該処理のためのテキスト/音声外部送信は行われません。</p>
+            <p>サードパーティAIサービスへのデータの送信は、アプリ内での事前同意を得た上で、ユーザー自身が「文字起こし」や「AI変換」のボタンを操作した時にのみ実行されます。バックグラウンドで自動的に送信されることはありません。</p>
         </section>
 
         <section class="section">
